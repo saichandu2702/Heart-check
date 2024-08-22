@@ -1,0 +1,12 @@
+import joblib
+from sklearn.ensemble import RandomForestClassifier
+from sklearn.datasets import load_iris
+
+# Train a model (replace this with your actual training code)
+data = load_iris()
+X, y = data.data, data.target
+model = RandomForestClassifier()
+model.fit(X, y)
+
+# Save the model
+joblib.dump(model, 'path/to/your_model.pkl')
